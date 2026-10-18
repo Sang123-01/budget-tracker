@@ -19,8 +19,9 @@ public class BudgetApp {
             double limit = scan.nextDouble();
             double spent = scan.nextDouble();
 
-            //groceries:
+            //Make new groceries:
             BudgetCategory NewGroceries = new BudgetCategory(category, limit, spent);
+            //Add new groceries into list.
             BudgetC.add(NewGroceries);
             // Consume \n after spent input 
             if(scan.hasNextLine()) scan.nextLine();
@@ -28,6 +29,8 @@ public class BudgetApp {
             String limitString = String.format("$%.2f", limit);
             String spentString = String.format("$%.2f", spent);
         }
+
+        //Print BudgetC.
         System.out.println(BudgetC);
 
     }
