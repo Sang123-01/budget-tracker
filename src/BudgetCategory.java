@@ -1,10 +1,10 @@
 public class BudgetCategory 
 {
     private String category;
-    private int limit;
-    private int spent;
+    private double limit;
+    private double spent;
 
-    public BudgetCategory(String category, int limit, int spent)
+    public BudgetCategory(String category, double limit, double spent)
     {
         this.category = category;
         this.limit = limit;
@@ -22,7 +22,7 @@ public class BudgetCategory
     }
 
     //For Limit
-    public int getLimit()
+    public double getLimit()
     {
         return limit;
     }
@@ -32,7 +32,7 @@ public class BudgetCategory
     }
 
     //For spent
-    public int getSpent()
+    public double getSpent()
     {
         return spent;
     }

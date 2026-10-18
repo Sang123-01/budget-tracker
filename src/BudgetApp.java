@@ -20,16 +20,15 @@ public class BudgetApp {
             double spent = scan.nextDouble();
 
             //groceries:
-            BudgetCategory NewGroceries = new BudgetCategory(category, 0, 0);
+            BudgetCategory NewGroceries = new BudgetCategory(category, limit, spent);
             BudgetC.add(NewGroceries);
             // Consume \n after spent input 
             if(scan.hasNextLine()) scan.nextLine();
 
             String limitString = String.format("$%.2f", limit);
             String spentString = String.format("$%.2f", spent);
-            // System.out.println("The budget limit for " + category + " was: " + limitString + 
-            //                    " but the actual spend was " + spentString);
         }
+        System.out.println(BudgetC);
 
     }
 
