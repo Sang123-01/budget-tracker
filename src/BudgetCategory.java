@@ -4,9 +4,11 @@ public class BudgetCategory
     private int limit;
     private int spent;
 
-    public BudgetApp(String category, int limit, int spent)
+    public BudgetCategory(String category, int limit, int spent)
     {
-        
+        this.category = category;
+        this.limit = limit;
+        this.spent = spent;
     }
     
     //For Category
@@ -37,5 +39,11 @@ public class BudgetCategory
     public void setSpent(int spent)
     {
         this.spent = spent;
+    }
+    
+    //String
+    public String toString()
+    {
+        return "Category: " + category + "; Limit: " + limit + "; Spent: " + spent;
     }
 }
