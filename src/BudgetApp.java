@@ -7,6 +7,12 @@ public class BudgetApp {
         
         //Budget Category of gorceries:
         BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
+        BudgetCategory groceries2 = new BudgetCategory("Groceries2", 600, 401);
+        BudgetCategory groceries3 = new BudgetCategory("Groceries3", 500, 800);
+
+        //Test Compare
+        System.out.println(groceries.compareTo(groceries2));
+        System.out.println(groceries2.compareTo(groceries3));
 
         System.out.println(groceries);
         Scanner scan = new Scanner(System.in);
