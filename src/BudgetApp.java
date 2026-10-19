@@ -45,6 +45,11 @@ public class BudgetApp {
         //Print BudgetC.
         System.out.println(BudgetC);
 
+        //Wave 5
+        if (!BudgetC.isEmpty())
+        {
+            System.out.printf("Average difference: $%.2f%n", budgetDifference(BudgetC) / BudgetC.size());
+        }
     }
 
     /**
