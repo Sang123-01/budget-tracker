@@ -41,7 +41,7 @@ public class BudgetApp {
         }
         //For Wave 4
         Collections.sort(BudgetC, Comparator.reverseOrder());
-        
+        System.out.println(budgetDifference(BudgetC));
         //Print BudgetC.
         System.out.println(BudgetC);
 
@@ -67,7 +67,7 @@ public class BudgetApp {
         for (int i = 0; i < categories.size(); i++) 
         {
             BudgetCategory current = categories.get(i);
-            total = current.getSpent() - current.getLimit();
+            total += current.getSpent() - current.getLimit();
         }
         return total;
     }
