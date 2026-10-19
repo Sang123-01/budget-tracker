@@ -41,6 +41,7 @@ public class BudgetApp {
         }
         //For Wave 4
         Collections.sort(BudgetC, Comparator.reverseOrder());
+        
         //Print BudgetC.
         System.out.println(BudgetC);
 
@@ -62,10 +63,12 @@ public class BudgetApp {
         // TODO: You will implement this method in Wave 4
         // Note that this method SHOULD NOT have a print statement.
         // It should instead return the value.
-        if(categories(spent) < BudgetCategory(limit))
-            {
-                return 0;
-            }
-        return -1;
+        double total = 0;
+        for (int i = 0; i < categories.size(); i++) 
+        {
+            BudgetCategory current = categories.get(i);
+            total = current.getSpent() - current.getLimit();
+        }
+        return total;
     }
 }
