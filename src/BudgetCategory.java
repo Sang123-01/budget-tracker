@@ -50,6 +50,23 @@ public class BudgetCategory implements Comparable<BudgetCategory>
     //This one for compare:
     public int compareTo(BudgetCategory other)
     {
-        return 0;
+        //This Difference
+       double myDifference;
+       myDifference = this.spent - this.limit; 
+
+       //Other Difference
+       double OtherDifference;
+       OtherDifference = other.spent - other.limit;
+       
+        // To coparing this to other
+        if(myDifference < OtherDifference)
+        {
+            return -1;
+        }
+        if(myDifference == OtherDifference)
+        {
+            return 0;
+        }
+        return 1;
     }
 }
