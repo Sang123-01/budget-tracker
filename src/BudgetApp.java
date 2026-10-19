@@ -1,18 +1,22 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Comparator;
+import java.util.Collection;
+import java.util.Collections;
 
 public class BudgetApp {
     public static void main(String[] args) {
         
         //Budget Category of gorceries:
         BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
-        BudgetCategory groceries2 = new BudgetCategory("Groceries2", 600, 401);
-        BudgetCategory groceries3 = new BudgetCategory("Groceries3", 500, 800);
+        
+        // BudgetCategory groceries2 = new BudgetCategory("Groceries2", 600, 401);
+        // BudgetCategory groceries3 = new BudgetCategory("Groceries3", 500, 800);
 
-        //Test Compare
-        System.out.println(groceries.compareTo(groceries2));
-        System.out.println(groceries2.compareTo(groceries3));
+        // //Test Compare
+        // System.out.println(groceries.compareTo(groceries2));
+        // System.out.println(groceries2.compareTo(groceries3));
 
         System.out.println(groceries);
         Scanner scan = new Scanner(System.in);
@@ -35,7 +39,8 @@ public class BudgetApp {
             String limitString = String.format("$%.2f", limit);
             String spentString = String.format("$%.2f", spent);
         }
-
+        //For Wave 4
+        Collections.sort(BudgetC, Comparator.reverseOrder());
         //Print BudgetC.
         System.out.println(BudgetC);
 
